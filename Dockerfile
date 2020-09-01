@@ -8,7 +8,8 @@ RUN \
   apt-get install -y software-properties-common
 
 # PPAs
-RUN add-apt-repository -y ppa:myriadrf/drivers && \
+RUN sudo add-apt-repository -y ppa:bladerf/bladerf && \
+    add-apt-repository -y ppa:myriadrf/drivers && \
     add-apt-repository -y ppa:myriadrf/gnuradio && \
     add-apt-repository -y ppa:gqrx/gqrx-sdr && \
     apt-get -y update
